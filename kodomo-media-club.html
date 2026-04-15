@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>なごみ子ども出版社｜子どもメディア倶楽部 参加者募集</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange: #E8722A;
+  --orange-light: #F9A96E;
+  --orange-pale: #FFF0E6;
+  --brown: #4A2E1A;
+  --brown-mid: #7A4F34;
+  --cream: #FDF8F3;
+  --warm-gray: #F2EDE7;
+  --text: #2D1F12;
+  --text-mid: #6B4B30;
+  --text-light: #9B7B60;
+  --white: #FFFFFF;
+  --green: #4C8B5E;
+  --border: #E8DDD4;
+  --max-w: 780px;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Noto Sans JP', sans-serif; background: var(--cream); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: inherit; }
+.section { padding: 80px 24px; max-width: var(--max-w); margin: 0 auto; }
+.section-label { font-size: 11px; font-weight: 700; letter-spacing: 4px; color: var(--orange); text-transform: uppercase; display: block; margin-bottom: 12px; }
+.section-title { font-family: 'Noto Serif JP', serif; font-size: clamp(22px, 4vw, 32px); font-weight: 700; color: var(--brown); line-height: 1.4; margin-bottom: 24px; }
+
+/* NAV */
+.nav { position: sticky; top: 0; z-index: 999; background: rgba(253,248,243,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-family: 'Noto Serif JP', serif; font-size: 15px; font-weight: 700; color: var(--brown); }
+.nav-cta { background: var(--orange); color: white; font-size: 13px; font-weight: 700; padding: 9px 22px; border-radius: 6px; text-decoration: none; transition: background 0.2s; }
+.nav-cta:hover { background: #c85e1a; }
+
+/* HERO */
+.hero { background: var(--orange-pale); border-bottom: 1px solid var(--border); padding: 72px 24px 64px; text-align: center; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: white; border: 1px solid var(--border); border-radius: 40px; padding: 6px 18px; font-size: 12px; font-weight: 700; color: var(--orange); letter-spacing: 1px; margin-bottom: 28px; }
+.hero-eyebrow::before { content: ''; width: 8px; height: 8px; background: var(--orange); border-radius: 50%; animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)} }
+.hero-title { font-family: 'Noto Serif JP', serif; font-size: clamp(24px, 5vw, 46px); font-weight: 700; color: var(--brown); line-height: 1.5; margin-bottom: 8px; }
+.hero-title .accent { color: var(--orange); }
+.hero-brand { font-size: 14px; color: var(--text-light); font-weight: 500; margin-bottom: 20px; letter-spacing: 2px; }
+.hero-sub { font-size: 14px; color: var(--text-mid); margin-bottom: 36px; line-height: 1.9; }
+.status-box { display: inline-block; background: white; border: 2px solid var(--orange-light); border-radius: 12px; padding: 16px 32px; margin-bottom: 36px; text-align: center; }
+.status-note { font-size: 12px; color: var(--text-light); margin-bottom: 8px; }
+.status-count { font-size: 15px; font-weight: 700; color: var(--brown); }
+.status-count .num { font-family: 'Noto Serif JP', serif; font-size: 22px; color: var(--orange); }
+.status-bar { width: 200px; height: 8px; background: var(--border); border-radius: 4px; margin: 10px auto 0; overflow: hidden; }
+.status-bar-fill { height: 100%; background: linear-gradient(90deg,var(--orange-light),var(--orange)); border-radius: 4px; width: 33%; }
+.hero-cta { display: inline-block; background: var(--orange); color: white; font-size: 17px; font-weight: 700; padding: 18px 52px; border-radius: 8px; text-decoration: none; letter-spacing: 1px; box-shadow: 0 4px 16px rgba(232,114,42,.3); transition: background .2s, transform .15s; }
+.hero-cta:hover { background: #c85e1a; transform: translateY(-2px); }
+
+/* VALUE */
+.value-intro { font-size: 15px; line-height: 2; color: var(--text-mid); margin-bottom: 32px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
+.value-intro strong { color: var(--brown); }
+.value-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.value-list li { display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px; background: var(--cream); border-radius: 10px; border-left: 4px solid var(--orange); }
+.value-list li:nth-child(2){border-left-color:#d4a843}
+.value-list li:nth-child(3){border-left-color:var(--green)}
+.value-list li:nth-child(4){border-left-color:#7B6EA0}
+.v-icon { font-size: 22px; flex-shrink: 0; padding-top: 2px; }
+.v-title { font-size: 15px; font-weight: 700; color: var(--brown); margin-bottom: 4px; }
+.v-desc { font-size: 13px; color: var(--text-mid); line-height: 1.7; }
+
+/* WHO */
+.who-grid { display: flex; flex-direction: column; gap: 12px; }
+.who-item { background: var(--white); border-radius: 8px; padding: 16px 20px 16px 48px; font-size: 15px; color: var(--brown); font-weight: 500; position: relative; }
+.who-item::before { content: '✓'; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--orange); font-weight: 900; font-size: 14px; width: 22px; height: 22px; background: var(--orange-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+/* PROJECT STEPS */
+.project-intro { font-size: 15px; line-height: 2; color: var(--text-mid); margin-bottom: 40px; }
+.steps { display: flex; flex-direction: column; gap: 0; position: relative; padding-left: 40px; border-left: 2px solid var(--border); margin-left: 14px; }
+.step { position: relative; padding-bottom: 36px; }
+.step:last-child { padding-bottom: 0; }
+.step::before { content: attr(data-num); position: absolute; left: -52px; top: 0; width: 32px; height: 32px; background: var(--orange); color: white; border-radius: 50%; font-size: 13px; font-weight: 900; display: flex; align-items: center; justify-content: center; }
+.step:last-child::before { background: var(--brown); font-size: 15px; }
+.step-title { font-size: 16px; font-weight: 700; color: var(--brown); margin-bottom: 6px; }
+.step-desc { font-size: 13px; color: var(--text-mid); line-height: 1.8; }
+
+/* PHOTOS */
+.photos-section { background: var(--brown); padding: 80px 24px; }
+.photos-inner { max-width: var(--max-w); margin: 0 auto; }
+.photos-section .section-label { color: var(--orange-light); }
+.photos-section .section-title { color: var(--white); margin-bottom: 32px; }
+.photo-grid-main { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 240px 180px; gap: 8px; margin-bottom: 8px; }
+.photo-grid-main .ph:first-child { grid-column: 1/2; grid-row: 1/3; }
+.photo-grid-sub { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+.photo-grid-sub .ph { height: 140px; }
+.photo-grid-wide { display: grid; grid-template-columns: 2fr 1fr; gap: 8px; }
+.photo-grid-wide .ph { height: 160px; }
+.ph { background: rgba(255,255,255,.08); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px dashed rgba(255,255,255,.15); color: rgba(255,255,255,.4); font-size: 12px; gap: 8px; transition: background .2s; }
+.ph:hover { background: rgba(255,255,255,.13); }
+.ph .ph-icon { font-size: 26px; opacity: 0.5; }
+.ph .ph-label { letter-spacing: 1px; }
+.photo-add-note { text-align: center; margin-top: 20px; color: rgba(255,255,255,.35); font-size: 12px; letter-spacing: 1px; }
+
+/* VOICES */
+.voice-grid { display: flex; flex-direction: column; gap: 20px; }
+.voice-card { background: var(--white); border-radius: 12px; padding: 28px 28px 22px; border: 1px solid var(--border); position: relative; }
+.voice-card::before { content: '\201C'; position: absolute; top: 10px; left: 18px; font-size: 48px; font-family: Georgia, serif; color: var(--orange-light); line-height: 1; }
+.voice-text { font-size: 16px; line-height: 1.9; color: var(--brown); font-weight: 500; padding-top: 8px; margin-bottom: 14px; }
+.voice-who { font-size: 13px; color: var(--text-light); display: flex; align-items: center; gap: 8px; }
+.voice-who::before { content: ''; display: block; width: 24px; height: 1px; background: var(--border); }
+
+/* PARENT */
+.parent-box { background: white; border-radius: 16px; padding: 36px 32px; border: 1px solid var(--border); }
+.parent-intro { font-size: 15px; line-height: 2; color: var(--text-mid); margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+.parent-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+.parent-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; color: var(--brown); font-weight: 500; }
+.parent-list li::before { content: '●'; color: var(--orange); font-size: 10px; margin-top: 6px; flex-shrink: 0; }
+.parent-body { font-size: 14px; color: var(--text-mid); line-height: 2; margin-bottom: 20px; }
+.parent-reassure { background: var(--orange-pale); border-radius: 10px; padding: 18px 20px; font-size: 14px; color: var(--brown); line-height: 1.9; border-left: 4px solid var(--orange); }
+
+/* RECRUIT */
+.recruit-classes { display: flex; flex-direction: column; gap: 24px; margin-bottom: 24px; }
+.class-card { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.class-head { background: var(--orange); padding: 16px 24px; display: flex; align-items: baseline; gap: 12px; }
+.class-card:nth-child(2) .class-head { background: var(--brown); }
+.class-name-h { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; color: white; }
+.class-area-h { font-size: 12px; color: rgba(255,255,255,.75); }
+.class-row { display: flex; align-items: flex-start; gap: 16px; padding: 14px 24px; border-bottom: 1px solid var(--border); font-size: 14px; }
+.class-row:last-child { border-bottom: none; }
+.class-row-label { font-weight: 700; color: var(--text-light); width: 60px; flex-shrink: 0; font-size: 12px; padding-top: 3px; letter-spacing: .5px; }
+.class-row-val { color: var(--brown); line-height: 1.7; }
+.fee-num { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 700; color: var(--orange); }
+.fee-unit { font-size: 13px; color: var(--text-light); }
+.recruit-common { background: var(--warm-gray); border-radius: 10px; padding: 20px 24px; font-size: 14px; color: var(--text-mid); line-height: 2.2; }
+.recruit-common strong { color: var(--brown); }
+
+/* FLOW */
+.flow-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; }
+.flow-step { text-align: center; padding: 32px 16px; position: relative; }
+.flow-step:not(:last-child)::after { content: '→'; position: absolute; right: -10px; top: 44px; font-size: 20px; color: var(--orange-light); }
+.flow-num { width: 44px; height: 44px; background: var(--orange); color: white; border-radius: 50%; font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+.flow-title { font-size: 14px; font-weight: 700; color: var(--brown); margin-bottom: 8px; }
+.flow-desc { font-size: 12px; color: var(--text-light); line-height: 1.7; }
+
+/* FINAL CTA */
+.final-cta { background: var(--brown); padding: 100px 24px; text-align: center; }
+.final-cta-inner { max-width: 600px; margin: 0 auto; }
+.final-title { font-family: 'Noto Serif JP', serif; font-size: clamp(22px, 4.5vw, 36px); font-weight: 700; color: var(--white); line-height: 1.55; margin-bottom: 12px; }
+.final-sub { font-size: 15px; color: rgba(255,255,255,.65); margin-bottom: 40px; line-height: 1.9; }
+.final-btn { display: inline-block; background: var(--orange); color: white; font-size: 18px; font-weight: 700; padding: 20px 56px; border-radius: 8px; text-decoration: none; letter-spacing: 1px; box-shadow: 0 6px 24px rgba(0,0,0,.3); transition: background .2s, transform .15s; }
+.final-btn:hover { background: #c85e1a; transform: translateY(-2px); }
+
+footer { background: #2D1F12; color: rgba(255,255,255,.45); padding: 32px 24px; text-align: center; font-size: 12px; line-height: 2.2; }
+footer span { color: rgba(255,255,255,.7); }
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .flow-steps{grid-template-columns:1fr}
+  .flow-step:not(:last-child)::after{content:'↓';right:auto;left:50%;top:auto;bottom:-8px;transform:translateX(-50%)}
+  .photo-grid-main{grid-template-columns:1fr 1fr;grid-template-rows:160px 160px}
+  .photo-grid-main .ph:first-child{grid-column:1/3;grid-row:1/2}
+  .photo-grid-sub{grid-template-columns:1fr 1fr}
+  .photo-grid-sub .ph:last-child{display:none}
+  .photo-grid-wide{grid-template-columns:1fr}
+  .photo-grid-wide .ph:last-child{display:none}
+  .parent-box{padding:24px 16px}
+  .value-list li{flex-direction:column;gap:8px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">なごみ子ども出版社</div>
+  <a href="#form" class="nav-cta">参加希望を送る</a>
+</nav>
+
+
+<!-- ① FIRSTVIEW -->
+<section class="hero">
+  <div class="hero-eyebrow">2025年度 参加者募集中</div>
+  <h1 class="hero-title">
+    子どもたちが地域を取材し、<br>
+    <span class="accent">"本として世に出す"</span>プロジェクト
+  </h1>
+  <p class="hero-brand">なごみ子ども出版社</p>
+  <p class="hero-sub">
+    考えたことを「作品」にする体験<br>
+    小学5年生〜高校生対象｜少人数制
+  </p>
+  <div class="status-box">
+    <p class="status-note">※本活動は3名以上で開催します</p>
+    <p class="status-count">現在 <span class="num">1</span> 名申込中 ｜ あと <span class="num">2</span> 名で開催決定</p>
+    <div class="status-bar"><div class="status-bar-fill"></div></div>
+  </div>
+  <a href="#form" class="hero-cta">まずは参加希望を送る →</a>
+</section>
+
+
+<!-- ② 得られること -->
+<div style="background:var(--white)">
+<div class="section">
+  <span class="section-label">VALUE</span>
+  <h2 class="section-title">この活動で<br>得られる力</h2>
+  <p class="value-intro">
+    この活動は、ただ楽しい体験ではありません。<br>
+    子どもたちが<strong>「自分で考え、形にし、伝える」力を育てるプロジェクト</strong>です。
+  </p>
+  <ul class="value-list">
+    <li>
+      <span class="v-icon">✏️</span>
+      <div>
+        <div class="v-title">自分の考えを言葉にする力</div>
+        <div class="v-desc">「なんとなく思っていること」を文章やデザインで外に出す難しさと向き合います。</div>
+      </div>
+    </li>
+    <li>
+      <span class="v-icon">🏁</span>
+      <div>
+        <div class="v-title">企画から完成までやり切る経験</div>
+        <div class="v-desc">途中で投げ出さず、一冊の本として完成させる達成感は他では得られないものです。</div>
+      </div>
+    </li>
+    <li>
+      <span class="v-icon">🤝</span>
+      <div>
+        <div class="v-title">仲間と協力して一つの作品を作る力</div>
+        <div class="v-desc">異なる学年・得意を持つ仲間と役割を分け、協力して仕上げる本物のチームワーク。</div>
+      </div>
+    </li>
+    <li>
+      <span class="v-icon">🌿</span>
+      <div>
+        <div class="v-title">地域とのつながりと視点の広がり</div>
+        <div class="v-desc">実際に地域に出て取材することで、身の回りの世界への見方が変わります。</div>
+      </div>
+    </li>
+  </ul>
+</div>
+</div>
+
+
+<!-- ③ こんなお子さんに -->
+<div style="background:var(--warm-gray)">
+<div class="section">
+  <span class="section-label">FOR YOUR CHILD</span>
+  <h2 class="section-title">こんなお子さんに<br>おすすめです</h2>
+  <div class="who-grid">
+    <div class="who-item">好奇心はあるけど、人前が少し苦手</div>
+    <div class="who-item">デザインやカメラ、文章に興味がある</div>
+    <div class="who-item">学校以外で何かに挑戦してみたい</div>
+    <div class="who-item">英語は得意ではないけど少し興味がある</div>
+    <div class="who-item">読書や表現することが好き</div>
+  </div>
+</div>
+</div>
+
+
+<!-- ④ やること -->
+<div style="background:var(--white)">
+<div class="section">
+  <span class="section-label">PROJECT</span>
+  <h2 class="section-title">子どもたちが行う<br>プロジェクト内容</h2>
+  <p class="project-intro">
+    子どもたちは、地域をテーマに実際のガイドブックを制作します。<br>
+    企画から取材、制作、完成まですべてを体験します。
+  </p>
+  <div class="steps">
+    <div class="step" data-num="①">
+      <div class="step-title">テーマを決める</div>
+      <div class="step-desc">「何を伝えたいか」から始まります。地域の文化・人・場所など、子どもたち自身がテーマを選びます。</div>
+    </div>
+    <div class="step" data-num="②">
+      <div class="step-title">取材・リサーチ</div>
+      <div class="step-desc">地域に飛び出して話を聞いたり、調べたりします。子どもたちが本物の「記者」として動く瞬間です。</div>
+    </div>
+    <div class="step" data-num="③">
+      <div class="step-title">文章・写真・デザイン制作</div>
+      <div class="step-desc">取材をもとに文章を書き、デザインや写真を組み合わせて誌面を作ります。</div>
+    </div>
+    <div class="step" data-num="📚">
+      <div class="step-title">冊子として完成！</div>
+      <div class="step-desc">印刷・製本された本物の冊子が完成します。自分の名前が載った作品を手にする達成感は格別です。</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ⑤ 活動写真 -->
+<div class="photos-section">
+  <div class="photos-inner">
+    <span class="section-label">GALLERY</span>
+    <h2 class="section-title">実際の活動の様子</h2>
+    <div class="photo-grid-main">
+      <div class="ph" style="grid-column:1;grid-row:1/3;border:none;">
+        <img src="photo5.jpg" alt="授業風景・先生と子どもたちのディスカッション" style="border-radius:8px;">
+      </div>
+      <div class="ph" style="border:none;">
+        <img src="photo3.png" alt="神楽取材・地域の方から話を聞く" style="border-radius:8px;">
+      </div>
+      <div class="ph" style="border:none;">
+        <img src="photo2.png" alt="授業の様子" style="border-radius:8px;">
+      </div>
+    </div>
+    <div class="photo-grid-sub">
+      <div class="ph" style="border:none;">
+        <img src="photo4.png" alt="パソコンで制作中" style="border-radius:8px;">
+      </div>
+      <div class="ph" style="border:none;">
+        <img src="photo1.jpg" alt="記者会見・完成発表の様子" style="border-radius:8px;">
+      </div>
+      <div class="ph" style="border:none;">
+        <img src="books.jpg" alt="制作した冊子" style="border-radius:8px;">
+      </div>
+    </div>
+    <div style="margin-top:8px;border-radius:8px;overflow:hidden;height:260px;">
+      <img src="books.jpg" alt="これまでに制作した5冊の冊子" style="width:100%;height:100%;object-fit:cover;object-position:center;border-radius:8px;">
+    </div>
+    <p class="photo-add-note">📚 これまでに制作した冊子 全5冊</p>
+  </div>
+</div>
+
+
+<!-- 実績：制作した冊子 -->
+<div style="background:var(--white)">
+<div class="section">
+  <span class="section-label">WORKS</span>
+  <h2 class="section-title">これまでに制作した作品</h2>
+  <p style="font-size:15px;line-height:2;color:var(--text-mid);margin-bottom:28px;">
+    活動開始からこれまでに、子どもたちの手で<strong style="color:var(--brown)">5冊の冊子</strong>を制作・発行しました。<br>
+    地域ガイドブックからオンラインスクール記録まで、すべて子どもたちが企画・取材・編集を担当しています。
+  </p>
+  <div style="border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 20px rgba(0,0,0,0.07);">
+    <img src="books.jpg" alt="なごみ子ども出版社 制作冊子 全5冊" style="width:100%;height:auto;display:block;">
+  </div>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;">
+    <span style="background:var(--orange-pale);color:var(--orange);font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;">KT²SAY Vol.1 なごみ町ガイドブック</span>
+    <span style="background:var(--orange-pale);color:var(--orange);font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;">KT²SAY Vol.2 ONLINE SCHOOL</span>
+    <span style="background:var(--orange-pale);color:var(--orange);font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;">なごみ町ガイドブック Vol.3</span>
+    <span style="background:var(--orange-pale);color:var(--orange);font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;">和水町でのさんぽのメリット Vol.4</span>
+    <span style="background:var(--orange-pale);color:var(--orange);font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;">熊本県菊池川流域 日本遺産 2023</span>
+  </div>
+</div>
+</div>
+
+<!-- ⑥ 参加者の声 -->
+<div style="background:var(--cream)">
+<div class="section">
+  <span class="section-label">VOICES</span>
+  <h2 class="section-title">参加した子どもたちの声</h2>
+  <div class="voice-grid">
+    <div class="voice-card">
+      <p class="voice-text">年齢がバラバラでも、いろんな意見が出て面白かった。</p>
+      <p class="voice-who">高校生</p>
+    </div>
+    <div class="voice-card">
+      <p class="voice-text">自分で考えて、最後まで形にできたのが嬉しかった！</p>
+      <p class="voice-who">中学生</p>
+    </div>
+    <div class="voice-card">
+      <p class="voice-text">途中でやめずに続けられたのは、仲間がいたからです。</p>
+      <p class="voice-who">小学生</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ⑦ 保護者の方へ -->
+<div style="background:var(--orange-pale)">
+<div class="section">
+  <span class="section-label">FOR PARENTS</span>
+  <h2 class="section-title">保護者の方へ</h2>
+  <div class="parent-box">
+    <p class="parent-intro">この活動は、ただ文章を書く体験ではありません。</p>
+    <ul class="parent-list">
+      <li>地域の人との関わりを通じた「社会とのつながり」</li>
+      <li>考える力・伝える力の実践的な育成</li>
+      <li>他者と協働して一つのものを仕上げる経験</li>
+    </ul>
+    <p class="parent-body">
+      こうした力は、これからの時代に必要な「生きる力」です。<br>
+      学校の授業では経験しにくい「企画から発信まで」の完全なサイクルを、地域というフィールドで体験できます。
+    </p>
+    <div class="parent-reassure">
+      「うちの子にできるかな」と不安な方もご安心ください。<br>
+      スタッフが一人ひとりに寄り添いながらサポートします。
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ⑧ 募集要項 -->
+<div style="background:var(--white)" id="recruit">
+<div class="section">
+  <span class="section-label">INFORMATION</span>
+  <h2 class="section-title">募集要項</h2>
+  <div class="recruit-classes">
+    <div class="class-card">
+      <div class="class-head">
+        <span class="class-name-h">和水町クラス</span>
+        <span class="class-area-h">熊本県玉名郡和水町</span>
+      </div>
+      <div>
+        <div class="class-row">
+          <span class="class-row-label">日程</span>
+          <span class="class-row-val">第1・3 土曜日</span>
+        </div>
+        <div class="class-row">
+          <span class="class-row-label">時間</span>
+          <span class="class-row-val">14:00 〜 15:30</span>
+        </div>
+        <div class="class-row">
+          <span class="class-row-label">場所</span>
+          <span class="class-row-val">和水町中央公民館<br><small style="color:var(--text-light)">〒865-0136 熊本県玉名郡和水町江田3883-1</small></span>
+        </div>
+        <div class="class-row">
+          <span class="class-row-label">参加費</span>
+          <span class="class-row-val"><span class="fee-num">1,000</span><span class="fee-unit"> 円 / 月</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="class-card">
+      <div class="class-head">
+        <span class="class-name-h">山鹿クラス</span>
+        <span class="class-area-h">熊本県山鹿市</span>
+      </div>
+      <div>
+        <div class="class-row">
+          <span class="class-row-label">日程</span>
+          <span class="class-row-val">第2・4 土曜日</span>
+        </div>
+        <div class="class-row">
+          <span class="class-row-label">時間</span>
+          <span class="class-row-val">16:00 〜 17:30</span>
+        </div>
+        <div class="class-row">
+          <span class="class-row-label">場所</span>
+          <span class="class-row-val">YAMAGA BASE<br><small style="color:var(--text-light)">〒861-0563 熊本県山鹿市鹿央町千田4187</small></span>
+        </div>
+        <div class="class-row">
+          <span class="class-row-label">参加費</span>
+          <span class="class-row-val"><span class="fee-num">2,000</span><span class="fee-unit"> 円 / 月</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="recruit-common">
+    <strong>対象：</strong>小学5年生〜高校生　／　<strong>定員：</strong>少人数制（3名以上で開催）<br>
+    <strong>持ち物：</strong>筆記用具（詳細は参加確定後にご案内します）
+  </div>
+</div>
+</div>
+
+
+<!-- ⑨ 参加までの流れ -->
+<div style="background:var(--cream)">
+<div class="section">
+  <span class="section-label">HOW TO JOIN</span>
+  <h2 class="section-title">参加までの流れ</h2>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-num">1</div>
+      <div class="flow-title">フォームから申込</div>
+      <div class="flow-desc">下記ボタンから参加希望フォームを送信してください</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">2</div>
+      <div class="flow-title">日程のご案内</div>
+      <div class="flow-desc">担当者よりご連絡し、参加クラスと日程をご案内します</div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-num">3</div>
+      <div class="flow-title">体験または参加スタート</div>
+      <div class="flow-desc">まずは見学・体験からOK。安心してスタートできます</div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ⑩ FINAL CTA -->
+<div class="final-cta" id="form">
+  <div class="final-cta-inner">
+    <h2 class="final-title">この体験を一緒に<br>始めてみませんか？</h2>
+    <p class="final-sub">
+      まずは参加希望をお送りください。<br>
+      見学だけのご相談も歓迎しています。
+    </p>
+    <a href="https://form.run/@glocallabo-q38DGEAItMtQofBS79sf" class="final-btn">参加希望を送る →</a>
+  </div>
+</div>
+
+
+<footer>
+  <span>なごみ子ども出版社 ／ 子どもメディア倶楽部</span><br>
+  和水町クラス・山鹿クラス　熊本県<br><br>
+  © 2025 Nagomi Kids Publisher. All rights reserved.
+</footer>
+
+</body>
+</html>
